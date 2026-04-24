@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGO Portal | E-SEWA</title>
+  <link rel="stylesheet" href="css/style.css" >
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="public/eseva-logo.jpeg" class="logo" alt="E-SEWA Logo">
+      <span class="brand">E-SEWA</span>
+    </div>
+  </nav>
+
+  <main>
+    <header class="header">
+      <h1>NGO Portal</h1>
+      <p>Submit and manage your resource requests</p>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('submit')">Submit New Need</button>
+      <button class="tab-btn" onclick="showTab('manage')">Manage Needs</button>
+    </div>
+
+    <div id="submitTab" class="tab-content active">
+      <div class="card">
+        <h2>Submit Resource Request</h2>
+        <form id="needForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>NGO Name</label>
+              <input type="text" id="ngoName" required>
+            </div>
+            <div class="form-group">
+              <label>Resource Type</label>
+              <input type="text" id="resourceType" placeholder="e.g., Food, Medicine, Clothing" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Quantity</label>
+              <input type="number" id="quantity" min="1" required>
+            </div>
+            <div class="form-group">
+              <label>Urgency Level</label>
+              <select id="urgency" required>
+                <option value="">Select Urgency</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Location</label>
+            <input type="text" id="location" placeholder="City, State" required>
+          </div>
+
+          <div class="form-group">
+            <label>Description</label>
+            <textarea id="description" rows="4" placeholder="Describe the need in detail..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Required Skills</label>
+            <input type="text" id="skill" placeholder="e.g., Medical, Logistics, Teaching">
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn-primary">Submit Request</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="manageTab" class="tab-content">
+      <div class="card">
+        <h2>Your Submitted Needs</h2>
+        <div id="needsList">
+          <p>Loading your needs...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/ngo.js"></script>
+</body>
+</html>

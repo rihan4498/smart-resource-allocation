@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | E-SEWA</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="public/eseva-logo.jpeg" class="logo" alt="E-SEWA Logo">
+      <span class="brand">E-SEWA</span>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Smart <span class="highlight">Resource Allocation</span></h1>
+    <p class="tagline">Connecting NGOs and donors in real time</p>
+
+    <div class="button-group">
+      <button onclick="openLoginModal()">Get Started</button>
+      <button class="secondary" onclick="location.href='dashboard.html'">View Dashboard</button>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Welcome to E-SEWA</h2>
+        <button class="close-modal" onclick="closeLoginModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="tagline">Choose your role to continue</p>
+
+        <div class="role-cards">
+          <div class="role-card" onclick="loginAsNGO()">
+            <div class="role-icon">🏢</div>
+            <h3>NGO</h3>
+            <p>Submit resource requests and manage your needs</p>
+            <button class="btn-primary">Login as NGO</button>
+          </div>
+          <div class="role-card" onclick="loginAsDonor()">
+            <div class="role-icon">🤝</div>
+            <h3>Donor</h3>
+            <p>Browse needs and make a difference</p>
+            <button class="btn-secondary">Login as Donor</button>
+          </div>
+          <div class="role-card" onclick="location.href='volunteer.html'">
+            <div class="role-icon">❤️</div>
+            <h3>Volunteer</h3>
+            <p>Offer your skills and time</p>
+            <button class="btn-accent">Join as Volunteer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

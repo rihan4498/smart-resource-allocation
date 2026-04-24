@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-SEWA | Smart Resource Allocation</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="public/eseva-logo.jpeg" alt="E-SEWA Logo" class="logo">
+      <span class="brand">E-SEWA</span>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Smart <span class="highlight">Resource Allocation</span></h1>
+    <p class="tagline">Connecting NGOs and donors in real time</p>
+
+    <div class="button-group">
+      <button onclick="location.href='login.html'">Get Started</button>
+      <button class="secondary" onclick="location.href='dashboard.html'">Donor</button>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="card">
+      <div class="icon">📦</div>
+      <h3>Real-time NGO Requests</h3>
+      <p>Instantly view and respond to urgent needs from NGOs across regions.</p>
+    </div>
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>Smart Resource Matching</h3>
+      <p>AI-powered algorithms connect donors with the most impactful opportunities.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📊</div>
+      <h3>Transparent Donor Tracking</h3>
+      <p>Full visibility into how your contributions make a difference.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>NGO Submits Request</h4>
+        <p>NGOs post their urgent resource needs with detailed requirements.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>Smart Matching</h4>
+        <p>Our AI matches requests with available donors and volunteers.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Real-time Coordination</h4>
+        <p>Donors and volunteers coordinate delivery in real-time.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h4>Impact Tracking</h4>
+        <p>Track the impact of your contributions with transparent reporting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <h2>What People Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>"E-SEWA transformed how we connect with donors. We've received help within hours of posting needs."</p>
+        <cite>- NGO Director, Mumbai</cite>
+      </div>
+      <div class="testimonial">
+        <p>"As a donor, I love seeing exactly how my contributions are making a difference."</p>
+        <cite>- Corporate Donor, Delhi</cite>
+      </div>
+      <div class="testimonial">
+        <p>"Volunteering has never been easier. The platform matches me with opportunities that fit my skills."</p>
+        <cite>- Volunteer, Bangalore</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat">
+      <div class="number" data-target="500">0</div>
+      <div class="label">NGOs Connected</div>
+    </div>
+    <div class="stat">
+      <div class="number" data-target="10000">0</div>
+      <div class="label">Resources Allocated</div>
+    </div>
+    <div class="stat">
+      <div class="number" data-target="95">0</div>
+      <div class="label">Success Rate</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>E-SEWA</h4>
+        <p>Empowering communities through smart resource allocation.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="login.html">Login</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="ngo.html">NGO Portal</a>
+        <a href="volunteer.html">Volunteer</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>support@eseva.org</p>
+        <p>+91 1800-XXX-XXXX</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 E-SEWA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 14L12 9L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

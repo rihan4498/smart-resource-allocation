@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | E-SEWA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="public/eseva-logo.jpeg" class="logo" alt="E-SEWA Logo">
+      <span class="brand">E-SEWA</span>
+    </div>
+  </nav>
+
+  <main>
+    <header class="header">
+      <h1>Needs Dashboard</h1>
+      <p>View and manage community resource requests</p>
+    </header>
+
+    <div class="dashboard-controls">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search needs..." />
+        <button id="searchBtn">🔍</button>
+      </div>
+      <div class="filters">
+        <select id="urgencyFilter">
+          <option value="">All Urgencies</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+        <select id="statusFilter">
+          <option value="">All Statuses</option>
+          <option value="Unassigned">Unassigned</option>
+          <option value="Assigned">Assigned</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="dashboard-stats">
+      <div class="stat-card">
+        <div class="stat-number" id="totalNeeds">0</div>
+        <div class="stat-label">Total Needs</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="unassignedNeeds">0</div>
+        <div class="stat-label">Unassigned</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="highUrgency">0</div>
+        <div class="stat-label">High Urgency</div>
+      </div>
+    </div>
+
+    <div class="needs-grid" id="needsContainer">
+      <!-- Needs will be populated here -->
+    </div>
+  </main>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

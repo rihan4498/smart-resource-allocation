@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer Portal | E-SEWA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="public/eseva-logo.jpeg" class="logo" alt="E-SEWA Logo">
+      <span class="brand">E-SEWA</span>
+    </div>
+  </nav>
+
+  <main>
+    <header class="header">
+      <h1>Volunteer Portal</h1>
+      <p>Register your availability to support NGOs</p>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('register')">Register</button>
+      <button class="tab-btn" onclick="showTab('status')">My Status</button>
+    </div>
+
+    <div id="registerTab" class="tab-content active">
+      <div class="card">
+        <h2>Volunteer Registration</h2>
+        <form id="volunteerForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+              <label>Age</label>
+              <input type="number" id="age" min="18" max="80" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Location</label>
+            <input type="text" id="location" placeholder="City, State" required>
+          </div>
+
+          <div class="form-group">
+            <label>Skills</label>
+            <select id="skill" required>
+              <option value="">Select Primary Skill</option>
+              <option value="Medical">Medical</option>
+              <option value="Logistics">Logistics</option>
+              <option value="Teaching">Teaching</option>
+              <option value="Cooking">Cooking</option>
+              <option value="Driving">Driving</option>
+              <option value="General">General Support</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Availability</label>
+            <select id="availability" required>
+              <option value="">Select Availability</option>
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Weekends">Weekends Only</option>
+              <option value="Emergency">Emergency Only</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Experience (Optional)</label>
+            <textarea id="experience" rows="3" placeholder="Brief description of relevant experience..."></textarea>
+          </div>
+
+          <button type="submit" id="registerBtn" class="btn-primary">Register as Volunteer</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="statusTab" class="tab-content">
+      <div class="card">
+        <h2>My Volunteer Status</h2>
+        <div id="volunteerStatus">
+          <p>Loading your status...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/volunteer.js"></script>
+</body>
+</html>
